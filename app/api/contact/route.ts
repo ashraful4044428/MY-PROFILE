@@ -25,7 +25,7 @@ export async function POST(req: Request) {
       from: process.env.CONTACT_FROM_EMAIL || "Portfolio Contact <onboarding@resend.dev>",
       to: [toEmail],
       subject: `Portfolio Message from ${name}`,
-      replyTo: email,
+      reply_to: email,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     });
 
